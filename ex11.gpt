@@ -1,0 +1,89 @@
+/***************************************************************************
+ *   exN.gpt                                  Version 20240425.130227      *
+ *                                                                         *
+ *   Adventure Text                                                        *
+ *   Copyright (C) 2024         by Ruben Carlo Benante                     *
+ ***************************************************************************
+ *   This program is free software; you can redistribute it and/or modify  *
+ *   it under the terms of the GNU General Public License as published by  *
+ *   the Free Software Foundation; version 2 of the License.               *
+ *                                                                         *
+ *   This program is distributed in the hope that it will be useful,       *
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
+ *   GNU General Public License for more details.                          *
+ *                                                                         *
+ *   You should have received a copy of the GNU General Public License     *
+ *   along with this program; if not, write to the                         *
+ *   Free Software Foundation, Inc.,                                       *
+ *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
+ ***************************************************************************
+ *   To contact the author, please write to:                               *
+ *   Ruben Carlo Benante                                                   *
+ *   Email: rcb@beco.cc                                                    *
+ *   Webpage: http://www.beco.cc                                           *
+ *   Phone: +55 (81) 3184-7555                                             *
+ ***************************************************************************/
+
+/*
+ * Instrucoes para compilar:
+ * $gpt exN.gpt -o exN.gpt.x
+ */
+
+/* ---------------------------------------------------------------------- */
+/* algoritmo */
+
+algoritmo adventure;
+
+variáveis
+    item : inteiro;
+    acao : inteiro;
+fim-variáveis
+
+início
+    imprima("===Bem vindo ao jogo Dark souls.txt===\n");
+    imprima("Você caminha em um reino já muito tempo esquecido, as ruínas com rachaduras aparentes trazem uma sensação de perigo e terror constante.\n");
+    imprima("Passos começam a ser escutados se aproximando cada vez mais rápido, parecem pesados mas ágeis, provavelmente de um monstro perigoso que ronda o reino caído.\n");
+    imprima("Com medo você pega uma de suas armas para lutar com o inimigo misterioso, em sua posse duas armas: um arco e uma espada, você só pode empunhar uma delas, qual será sua arma?\n");
+
+    imprima(">1-Espada<\n");
+    imprima(">2-Arco<\n");
+    imprima("Sua escolha: ");
+    item := leia();
+
+    enquanto item <> 1 e item <> 2 faça
+        imprima("Escolha uma resposta válida!!!\n");
+        imprima("Sua escolha: ");
+        item := leia();
+    fim-enquanto
+
+    se item = 1 então
+        imprima("Você empunha a espada com bravura enquanto o monstro aparece de forma veloz e corre em sua direção!\n");
+        imprima("Apenas duas escolhas parecem possíveis: atacar ou fugir!\n");
+
+        imprima(">1-Atacar<\n");
+        imprima(">2-Fugir<\n");
+        imprima("Sua escolha: ");
+        acao := leia();
+
+        enquanto acao <> 1 e acao <> 2 faça
+            imprima("Escolha uma resposta válida!!!\n");
+            imprima("Sua escolha: ");
+            acao := leia();
+        fim-enquanto
+
+        se acao = 1 então
+            imprima("Você ataca o monstro com toda sua força, mas não parece ser o bastante para derrotá-lo com apenas um ataque. Ele te ataca, mas você se defende e contra-ataca!\n");
+            imprima("Você acertou o coração da fera! Ela cai fraca e você a finaliza no mesmo instante. Você sai vitorioso com a cabeça do seu inimigo, a qual vale uma grande quantidade de ouro e ferro.\n");
+            imprima("VOCÊ GANHOU!\n");
+        senão
+            imprima("Você tenta fugir, mas ele é mais rápido do que você! Ele te alcança e te corta ao meio rapidamente, te matando no mesmo instante.\n");
+            imprima("VOCÊ PERDEU! Tente novamente\n");
+        fim-se
+    senão
+        imprima("Você pega o arco rapidamente, preparando-o para acertar o monstro com inúmeras flechas! No entanto, para sua surpresa, o monstro resiste às flechadas e continua avançando!\n");
+        imprima("Ele te ataca com toda a força e você acaba não resistindo ao grande impacto. Você cai sem nenhuma força para lutar e morre.\n");
+        imprima("VOCÊ PERDEU! Tente novamente\n");
+    fim-se
+
+fim
