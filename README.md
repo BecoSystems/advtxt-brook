@@ -1,14 +1,13 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/DKeX1skB)
-## Nome do Repositório
+## advtxt-brook
 
 ### Introdução 
 
-* Colocar aqui uma breve explicação do programa
-* Explicar o processamento
+* Este programa é uma implementação em C de um jogo de aventura baseada em texto. O objetivo do jogo é simular uma aventura.
 
 ### Uso
 
-* Colocar aqui a sintáxe de uso do programa
+* Compile o código usando o makefile fornecido e execute o binário gerado. O programa aceitará entradas do usuário para navegação e progresso do jogo.
 * Entradas esperadas
 * Saída produzida
 
