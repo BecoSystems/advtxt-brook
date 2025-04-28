@@ -94,7 +94,7 @@ int main(void)
     scanf("%s", acao);
     if (strcmp(acao, "atacar") == 0)
     {
-        printf("Você ataca o montro com toda sua força, mas não parece ser o bastante para derrota-lo com apenas um ataque. Ele te ataca, mas você se defende e contra-ataca!\n");
+        printf("Você ataca o monstro com toda sua força, mas não parece ser o bastante para derrota-lo com apenas um ataque. Ele te ataca, mas você se defende e contra-ataca!\n");
         printf("Você acertou o coração da fera! ela cai fraca e você a finaliza no mesmo instante. Você sai vitorioso com a cabeça do seu inimigo, a qual vale uma grande quantidade de ouro e ferro\n");
         printf("Triunfantemente você caminha em busca de novos desafios e riquezas!\n");
         printf("VOCÊ GANHOU!\n");
