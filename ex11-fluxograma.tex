@@ -133,8 +133,9 @@ Ele também foi modelato em \textit{fluxograma} para melhor entendimento do cód
 	\node (sim) [print, right of=tot1, node distance=6.5cm] {Morreu (escolheu arco)};
 	\node (nao) [print, right of=maior, node distance=6.5cm] {Morreu (fugiu)};
 	\node (fim) [startend, below of=maior, node distance=4.5cm] {Venceu (atacou)};
+    \node (fim2) [startend, below of=nao, node distance=3cm] {Fim};
 
-	% Desenhar as setas
+    % Desenhar as setas
 	\path [line] (inicio) -- (txta);
 	\path [line] (txta) -- (inp1);
 	\path [line] (inp1) -- (tot1);
@@ -142,6 +143,9 @@ Ele também foi modelato em \textit{fluxograma} para melhor entendimento do cód
 	\path [line] (tot1) -- node[anchor=north] {Não} (sim);
 	\path [line] (maior) -- node[anchor=east] {Atacar} (fim);
 	\path [line] (maior) -- node[anchor=north] {Fugir} (nao);
+    \path [line] (sim) |- (fim2);
+    \path [line] (nao) -- (fim2);
+
 \end{tikzpicture}
 
 \clearpage % inicia próxima seção em nova página
